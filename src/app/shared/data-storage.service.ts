@@ -51,6 +51,7 @@ export class DataStorageService {
   getRecipes() {
     const token = this.authService.getToken();
 
+
     this.httpClient.get <Recipe[]> ('https://ng-recipe-book-1a4f7.firebaseio.com/recipes.json?auth=' + token, {
         observe: 'body',
         responseType: 'json'
